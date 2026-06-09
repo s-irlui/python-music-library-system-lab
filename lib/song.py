@@ -3,7 +3,7 @@ class Song:
     genres = []
     artists = []
     genre_count = {}
-    artists_count = {}
+    artist_count = {}
 
     def __init__(self, name, artist, genre):
         self.name = name
@@ -35,7 +35,7 @@ class Song:
             Song.genre_count[self.genre] = 1
 
     def add_to_artists_count(self):
-        if self.artist in Song.artists_count:
-            Song.artists_count[self.artist] += 1
+        if self.artist in Song.artist_count:
+            Song.artist_count[self.artist] += 1
         else:
-            Song.artists_count[self.artist] = 1
+            Song.artist_count[self.artist] = 1
